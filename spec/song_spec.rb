@@ -12,8 +12,8 @@ describe "Song" do
     Song.class_variable_set(:@@count, 0)
 
 # added by gilad barkan june 16. 2016 to test for error in spec counts 
-    Song.class_variable_set(:@@artist_count, {})
-    Song.class_variable_set(:@@genre_count, {})
+#    Song.class_variable_set(:@@artist_count, {})
+ #   Song.class_variable_set(:@@genre_count, {})
 # end add
 
   end
