@@ -10,6 +10,7 @@ describe "Song" do
     Song.class_variable_set(:@@artists, [])
     Song.class_variable_set(:@@genres, [])
     Song.class_variable_set(:@@count, 0)
+
   end
   describe "#new" do 
     it "takes in three arguments: a name, artist and genre" do 
