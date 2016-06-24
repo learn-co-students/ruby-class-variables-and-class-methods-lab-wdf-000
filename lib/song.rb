@@ -22,14 +22,17 @@ class Song
 
   def self.genres
     final = @@genres
-    final.delete_if { |e| final.count(e) > 1 }
-    final
+    # final.delete_if { |e| final.count(e) > 1 }
+    # final
+    final.uniq
+
   end
 
   def self.artists
     final = @@artists
-    final.delete_if { |e| final.count(e) > 1 }
-    final
+    # final.delete_if { |e| final.count(e) > 1 }
+    # final
+    final.uniq
   end
 
   def self.genre_count
