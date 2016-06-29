@@ -49,9 +49,3 @@ class Song
   end
 
 end
-
-song_1 = Song.new("99 Problems", "Jay-Z", "rap")
-song_2 = Song.new("Ordinary People", "John Legend", "r&b")
-song_3 = Song.new("Back to Back", "Drake", "rap")
-
-# binding.pry
