@@ -1,3 +1,6 @@
+
+require 'pry'
+
 class Song
 
 attr_accessor :name, :artist, :genre
@@ -13,7 +16,6 @@ def initialize(name, artist, genre)
   @@artists << artist
   @@count += 1
 end
-
 def self.count
   @@count
 end
@@ -27,14 +29,34 @@ def self.artists
 end
 
 
+# def self.genre_count
+#   @@genres.inject(Hash.new(0)) { |h, x| h[x] += 1; h}
+# end
+
+
 def self.genre_count
-  @@genres.inject(Hash.new(0)) { |h, x| h[x] += 1; h}
+  genre_hash = {}
+  @@genres.each do |genre|
+    if genre_hash.include?(genre)
+      genre_hash[genre] += 1
+    else
+      genre_hash[genre] = 1
+    end
+  end
+  genre_hash
 end
 
+
+# def self.artist_count
+#   @@artists.inject(Hash.new(0)) { |h, x| h[x] += 1; h}
+# end
 
 def self.artist_count
-  @@artists.inject(Hash.new(0)) { |h, x| h[x] += 1; h}
+  artist_hash = {}
+  @@artists.each do |artist|
+    artist_hash[artist] = @@artists.count(artist)
+  end
+  artist_hash
 end
-
 
 end
