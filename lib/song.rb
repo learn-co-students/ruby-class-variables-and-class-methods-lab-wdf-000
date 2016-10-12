@@ -79,9 +79,28 @@ class Song
     end
   end
 
+
+  # another way
+  # def self.genre_count
+  # genre_histogram = Hash.new 0
+  # @@genres.each do |genre|
+  # genre_histogram[genre] += 1
+  # end
+  # artist_histogram
+  # end
+
+  # def self.artist
+  # artist_count = {}
+  # @@artists.each do |artist|
+  # artist_count[artist] ||= 0
+  # artist_count[artist] += 1
+  # end
+  # artist_count
+  # end
+
+
   
 # {"a"=>1, "b"=>2}
-
 # here our Song class reveal value to us.
 # song1 = Song.new
 # song1.genre_count
